@@ -18,7 +18,7 @@ def browser(request):
     if browser_lang:
         print("\nstart ES chrome browser for test..")
         options.add_experimental_option('prefs', {'intl.accept_languages': browser_lang})
-        browser = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
+        browser = webdriver.Chrome(options=options)
 
     else:
         raise pytest.UsageError("--browser_name should be chrome or firefox")
